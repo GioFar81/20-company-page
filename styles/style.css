@@ -1,0 +1,386 @@
+h4,
+.h4 {
+  font-size: 1.333rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.5em;
+  font-size: clamp(
+                    1rem,
+                    4.333vw + 1rem,
+                    1.333rem
+            );
+}
+
+h3,
+.h3 {
+  font-size: 1.776889rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.5em;
+  font-size: clamp(
+                    1.19051563rem,
+                    4.58637337vw + 1rem,
+                    1.776889rem
+            );
+}
+
+h2,
+.h2 {
+  font-size: 2.368593037rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.5em;
+  font-size: clamp(
+                    1.5869573348rem,
+                    4.7816357022vw + 1rem,
+                    2.368593037rem
+            );
+}
+
+h1,
+.h1 {
+  font-size: 3.1573345183rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.5em;
+  font-size: clamp(
+                    2.1154141273rem,
+                    5.041920391vw + 1rem,
+                    3.1573345183rem
+            );
+}
+
+/*| Created by GioFar on Sunday 10/04/2022 |*/
+/*--------------| ROOT STYLES |---------------*/
+html {
+  color: #F2F1ED;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #8E8480;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+body p {
+  margin-bottom: 0.65rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p, li {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/*-----------------| HEADER |-----------------*/
+.bar {
+  align-items: center;
+  background-color: #3a4246;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6666666667);
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+.bar h1 {
+  color: #BDA283;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*------------------| NAV |-------------------*/
+:target {
+  display: block;
+  position: relative;
+  top: -4rem;
+  visibility: hidden;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+.navbar ul li {
+  align-self: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  padding: 0;
+}
+.navbar ul li:hover, .navbar ul li:focus {
+  transform: scale(1.1);
+}
+.navbar ul li ::after {
+  background-color: #995F4B;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: auto;
+  transition: 0.5s;
+  width: 0;
+}
+.navbar ul li :hover::after {
+  width: 100%;
+}
+.navbar ul li:active {
+  transform: scale(1);
+}
+.navbar ul li a {
+  color: #BDA283;
+  text-decoration: none;
+}
+/*------------------| MAIN |------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/*-----------------| BANNER |-----------------*/
+.banner {
+  align-items: center;
+  background-blend-mode: soft-light;
+  background-color: rgb(78, 93, 102);
+  background-image: url("../img/banner.jpg");
+  background-position: 0 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+.banner .card {
+  max-width: 35rem;
+  padding: 2rem;
+  text-align: center;
+}
+.banner .card h2 {
+  color: #F2F1ED;
+  font-family: "Permanent Marker", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.banner .card p {
+  color: #F2F1ED;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/*-----------------| SECTION |----------------*/
+section {
+  background-color: #4E5D66;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6666666667);
+  margin-bottom: 4rem;
+}
+section .content {
+  font-family: "Poppins", sans-serif;
+  padding: 3rem;
+}
+section .content .text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.statement .content {
+  align-items: center;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+.statement .content .text {
+  background-color: #3a4246;
+  border: 0.5rem solid #995F4B;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  color: #F2F1ED;
+  display: flex;
+  flex-basis: 35%;
+  flex-direction: column;
+  flex-shrink: 1;
+  justify-content: center;
+  min-width: 363px;
+  padding: 3rem;
+  transition: 1s ease 0.2s;
+  z-index: 1;
+}
+.statement .content .text:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  margin-right: -6rem;
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+.statement .content .text p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: center;
+}
+.statement .content .image {
+  flex-basis: 35%;
+  flex-shrink: 1;
+}
+.statement .content .image img {
+  border-radius: 1rem;
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0);
+  min-width: 400px;
+  width: 100%;
+}
+
+.products .content {
+  align-items: center;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  margin: auto;
+}
+.products .graphics {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.products .graphics figure {
+  background-color: #BDA283;
+  border: 5px solid #995F4B;
+  border-radius: 1rem;
+  box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.6666666667);
+  padding: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+.products .graphics figure:hover, .products .graphics figure :focus {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6666666667);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.1s ease-in-out;
+}
+.products .graphics figure:active {
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6666666667);
+  transform: scale(1.025);
+  transition: all 0.2s ease-in-out;
+}
+.products .graphics figure figcaption {
+  color: #3a4246;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+.products .graphics img {
+  border-radius: 1rem;
+  max-width: 475px;
+}
+
+.employees .content {
+  align-items: center;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  margin: auto;
+}
+.employees .content .graphics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+}
+.employees .content .graphics figure {
+  background-color: #BDA283;
+  border: 5px solid #995F4B;
+  border-radius: 1rem;
+  box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.6666666667);
+  color: #3a4246;
+  flex-basis: 25%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.employees .content .graphics figure:hover, .employees .content .graphics figure :focus {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6666666667);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+.employees .content .graphics figure:active {
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6666666667);
+  transform: scale(1);
+  transition: all 0.1s ease-in-out;
+}
+.employees .content .graphics figure img {
+  border: 3px solid #4E5D66;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  min-width: 350px;
+  width: 100%;
+}
+
+.contacts .content {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 0 auto;
+}
+.contacts .content .details {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.contacts .content .details .info {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+.contacts .content .details .info div {
+  background-color: #BDA283;
+  color: #3a4246;
+  font-size: 1.1rem;
+  border: 5px solid #995F4B;
+  border-radius: 1rem;
+  flex-basis: 40%;
+  min-width: 250px;
+  padding: 1rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5333333333);
+}
+.contacts .content .details .map {
+  flex: 1;
+}
+
+/*-----------------| FOOTER |-----------------*/
+footer {
+  background-color: #4E5D66;
+  height: 3.5rem;
+  display: flex;
+}
+footer p {
+  margin: auto;
+}
+
+/*-------------| MEDIA QUERIES |--------------*/
+/*-------------| STYLESHEET END |-------------*/
+
+/*# sourceMappingURL=style.css.map */
