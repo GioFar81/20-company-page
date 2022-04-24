@@ -12,12 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        <!-- Fonts Roboto 300 Italic, 400, 700, 900 / Signika Negative 400, 700 -->
+        <!-- Fonts Exo 400 500 600 700, Nunito Sans 300 400 600 700 800 -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&family=Signika+Negative:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         
         <!-- Favicon -->
         <link rel="shortcut icon" href="./img/camera.png" type="image/x-icon">
@@ -33,7 +31,7 @@
     
     <body>
         <!-- ******************************************************* | HEADER | ******************************************************* -->
-        <header class="bar">
+        <header class="bar desktop">
             <h1>Giovanni Farina</h1>
             <!-- ************************************************* | NAVIGATION | ***************************************************** -->
             <nav aria-label="Main Navigation" class="navbar">
@@ -42,17 +40,44 @@
                     <li><a href="#statement-link">Statement</a></li>
                     <li><a href="#products-link">Products</a></li>
                     <li><a href="#employees-link">Employees</a></li>
-                    <li><a href="#contacts-link">Contacts Us</a></li>
+                    <li><a href="#contacts-link">Contacts</a></li>
                 </ul>
             </nav>
         </header>
+        
+        <header class="bar tablet">
+            <!-- ************************************************* | NAVIGATION | ***************************************************** -->
+            <nav aria-label="Main Navigation" class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#statement-link">Statement</a></li>
+                    <li><a href="#products-link">Products</a></li>
+                    <li><a href="#employees-link">Employees</a></li>
+                    <li><a href="#contacts-link">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <header class="bar mobile">
+            <!-- ************************************************* | NAVIGATION | ***************************************************** -->
+            <nav aria-label="Main Navigation" class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#statement-link">Statement</a></li>
+                    <li><a href="#products-link">Products</a></li>
+                    <li><a href="#employees-link">Employees</a></li>
+                    <li><a href="#contacts-link">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        
         <!-- *********************************************************| MAIN |********************************************************* -->
         <main>
             
             <!-- BANNER SECTION -->
             <section role="banner" class="banner">
                 <div class="card">
-                    <h2>GF Photography</h2>
+                    <h1>GF Photography</h1>
                     <p>Photography services in London and South England.</p>
                 </div>
             </section>
@@ -76,7 +101,7 @@
                     
                     <div class="image">
                         <img src="./img/statement.jpg" alt="Photographer with tripod silhouette">
-                        <p>Photo by <a href="https://unsplash.com/@michaelhenry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Henry</a> on <a
+                        <p class="credits">Photo by <a href="https://unsplash.com/@michaelhenry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Henry</a> on <a
                                 href="https://unsplash.com/s/photos/photographer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                         </p>
                     </div>
@@ -126,7 +151,7 @@
                         </figure>
                     </div>
                     
-                    <p>Image credit of <a href="https://giovannifarina.com" target="_blank">&copy;Giovanni Farina</a></p>
+                    <p class="credits">Image credit of <a href="https://giovannifarina.com" target="_blank">&copy;Giovanni Farina</a></p>
                 
                 </div>
             </section>
@@ -146,18 +171,21 @@
                             <img src="./img/employees/giovanni.jpg" alt="Giovanni Farina headshot">
                             <p>Giovanni Farina</p>
                             <p>CEO/Photographer/Retoucher</p>
+                            <p class="credits">Image credit of <a href="https://giovannifarina.com" target="_blank">&copy;Giovanni Farina</a></p>
                         </figure>
                         
                         <figure>
                             <img src="img/employees/jane-doe.jpg" alt="fictional employees one">
                             <p>Jane Doe (fictional)</p>
                             <p>Marketing/Social Networks</p>
+                            <p class="credits">Photo by <a href="https://unsplash.com/@hazelcim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hazel Aksoy</a></p>
                         </figure>
                         
                         <figure>
                             <img src="./img/employees/john-doe-a.jpg" alt="fictional employees two">
                             <p>John Doe (fictional)</p>
                             <p>Videographer/Content Creator</p>
+                            <p class="credits">Photo by <a href="https://unsplash.com/@miracletwentyone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joseph Gonzalez</a></p>
                         </figure>
                     </div>
                 

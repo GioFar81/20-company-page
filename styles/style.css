@@ -55,11 +55,18 @@ html {
 
 body {
   background-color: #8E8480;
-  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.2;
 }
-body p {
+body h1 {
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+}
+body h2, body h3 {
+  font-family: "Exo", sans-serif;
+}
+body p, body a, body figcaption {
+  font-family: "Nunito Sans", sans-serif;
   margin-bottom: 0.65rem;
 }
 
@@ -88,11 +95,14 @@ p, li {
 }
 .bar h1 {
   color: #BDA283;
-  font-family: "Permanent Marker", cursive;
   font-size: 2.5rem;
   margin-bottom: 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+.tablet, .mobile {
+  display: none;
 }
 
 /*------------------| NAV |-------------------*/
@@ -109,12 +119,8 @@ p, li {
 }
 .navbar ul li {
   align-self: center;
-  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   padding: 0;
-}
-.navbar ul li:hover, .navbar ul li:focus {
-  transform: scale(1.1);
 }
 .navbar ul li ::after {
   background-color: #995F4B;
@@ -129,19 +135,33 @@ p, li {
 .navbar ul li :hover::after {
   width: 100%;
 }
+.navbar ul li :active::after {
+  width: 20%;
+}
 .navbar ul li:active {
   transform: scale(1);
 }
 .navbar ul li a {
   color: #BDA283;
+  font-weight: bold;
   text-decoration: none;
 }
+.navbar ul li a:hover, .navbar ul li a:focus {
+  color: #995F4B;
+}
+.navbar ul li a:active {
+  color: #8E8480;
+}
+
 /*------------------| MAIN |------------------*/
 main {
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
   text-align: center;
+}
+main a {
+  color: #F2F1ED;
 }
 
 /*-----------------| BANNER |-----------------*/
@@ -165,11 +185,9 @@ main {
   padding: 2rem;
   text-align: center;
 }
-.banner .card h2 {
+.banner .card h1 {
   color: #F2F1ED;
-  font-family: "Permanent Marker", cursive;
   font-size: 4rem;
-  font-weight: 400;
 }
 .banner .card p {
   color: #F2F1ED;
@@ -184,8 +202,13 @@ section {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6666666667);
   margin-bottom: 4rem;
 }
+section .credits {
+  color: #F2F1ED;
+}
+section .credits a {
+  color: #995F4B;
+}
 section .content {
-  font-family: "Poppins", sans-serif;
   padding: 3rem;
 }
 section .content .text h2 {
@@ -193,6 +216,7 @@ section .content .text h2 {
   font-weight: bold;
 }
 
+/*-------------| STATEMENT SECTION |------------*/
 .statement .content {
   align-items: center;
   border-radius: 1rem;
@@ -240,6 +264,7 @@ section .content .text h2 {
   width: 100%;
 }
 
+/*-------------| PRODUCTS SECTION |-------------*/
 .products .content {
   align-items: center;
   border-radius: 1rem;
@@ -262,6 +287,9 @@ section .content .text h2 {
   border: 5px solid #995F4B;
   border-radius: 1rem;
   box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.6666666667);
+  flex-basis: 32%;
+  flex-wrap: wrap;
+  min-width: 400px;
   padding: 1rem;
   transition: all 0.1s ease-in-out;
 }
@@ -285,9 +313,10 @@ section .content .text h2 {
 }
 .products .graphics img {
   border-radius: 1rem;
-  max-width: 475px;
+  width: 100%;
 }
 
+/*-------------| EMPLOYEES SECTION |------------*/
 .employees .content {
   align-items: center;
   border-radius: 1rem;
@@ -335,36 +364,42 @@ section .content .text h2 {
   width: 100%;
 }
 
+/*--------------| CONTACT SECTION |-------------*/
 .contacts .content {
+  align-items: center;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  justify-content: center;
   margin: 0 auto;
 }
 .contacts .content .details {
+  align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   justify-content: center;
-  align-items: center;
 }
 .contacts .content .details .info {
+  align-content: space-evenly;
   display: flex;
   flex: 1;
   flex-wrap: wrap;
   gap: 1rem;
+  height: 455px;
   justify-content: space-evenly;
 }
 .contacts .content .details .info div {
   background-color: #BDA283;
-  color: #3a4246;
-  font-size: 1.1rem;
   border: 5px solid #995F4B;
   border-radius: 1rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5333333333);
+  color: #3a4246;
   flex-basis: 40%;
+  font-size: 1.1rem;
   min-width: 250px;
   padding: 1rem;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5333333333);
 }
 .contacts .content .details .map {
   flex: 1;
@@ -373,14 +408,98 @@ section .content .text h2 {
 /*-----------------| FOOTER |-----------------*/
 footer {
   background-color: #4E5D66;
-  height: 3.5rem;
   display: flex;
+  height: 3.5rem;
 }
 footer p {
   margin: auto;
 }
 
 /*-------------| MEDIA QUERIES |--------------*/
+@media only screen and (max-width: 1320px) {
+  .products .graphics figure {
+    min-width: 450px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .statement .content .text p {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 1274px) {
+  .contacts .content {
+    flex-grow: 1;
+  }
+  .contacts .content .details .info {
+    flex-basis: 100%;
+    height: 100%;
+  }
+  .contacts .content .details .info div {
+    flex-basis: 23%;
+  }
+  .contacts .content .details .map {
+    flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 1090px) {
+  .desktop {
+    display: none;
+  }
+
+  .tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 874px) {
+  .statement .content .text {
+    flex-basis: 100%;
+  }
+  .statement .content .text:hover {
+    box-shadow: none;
+    margin-right: 0;
+    transform: none;
+  }
+  .statement .content .image {
+    flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .navbar ul {
+    gap: 1rem;
+  }
+  .navbar ul li {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .contacts .map iframe {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 611px) {
+  .contacts .content {
+    flex-grow: 1;
+  }
+  .contacts .content .details .info {
+    flex-basis: 100%;
+    height: 100%;
+  }
+  .contacts .content .details .info div {
+    flex-basis: 23%;
+    min-width: 200px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .tablet {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
 /*-------------| STYLESHEET END |-------------*/
 
 /*# sourceMappingURL=style.css.map */
