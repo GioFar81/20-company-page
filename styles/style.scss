@@ -450,6 +450,9 @@ footer {
     .desktop {
         display: none;
     }
+    .mobile {
+        display: none;
+    }
     .tablet {
         display: flex;
         justify-content: center;
@@ -519,6 +522,9 @@ footer {
 
 @media only screen and (max-width: 595px) {
     .tablet {
+        display: none;
+    }
+    .desktop {
         display: none;
     }
     .mobile {
