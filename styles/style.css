@@ -93,7 +93,7 @@ p, li {
   width: 100%;
   z-index: 5;
 }
-.bar h1 {
+.bar p {
   color: #BDA283;
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -162,7 +162,7 @@ main {
   text-align: center;
 }
 main a {
-  color: #F2F1ED;
+  color: #8E8480;
 }
 
 /*-----------------| BANNER |-----------------*/
@@ -207,7 +207,8 @@ section .credits {
   color: #F2F1ED;
 }
 section .credits a {
-  color: #995F4B;
+  color: #F2F1ED;
+  font-weight: bold;
 }
 section .content {
   padding: 3rem;

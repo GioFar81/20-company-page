@@ -55,7 +55,7 @@ p, li {
     top: 0;
     width: 100%;
     z-index: 5;
-    h1 {
+    p {
         color: a.$brand;
         font-size: 2.5rem;
         margin-bottom: 0;
@@ -132,7 +132,7 @@ main {
     margin-top: $dsk-bar-height;
     text-align: center;
     a {
-        color: a.$l-shades;
+        color: a.$l-accent;
     }
 }
 
@@ -178,7 +178,8 @@ section {
     .credits {
         color: a.$l-shades;
         a {
-            color: a.$d-accent;
+            color: a.$l-shades;
+            font-weight: bold;
         }
     }
     .content {
