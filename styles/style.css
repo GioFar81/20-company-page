@@ -136,7 +136,8 @@ p, li {
   width: 100%;
 }
 .navbar ul li :active::after {
-  width: 20%;
+  transition: 0.01s;
+  width: 75%;
 }
 .navbar ul li:active {
   transform: scale(1);
@@ -170,7 +171,7 @@ main a {
   background-blend-mode: soft-light;
   background-color: rgb(78, 93, 102);
   background-image: url("../img/banner.jpg");
-  background-position: 0 55%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 0 1rem 1rem;
@@ -218,7 +219,7 @@ section .content .text h2 {
 
 /*-------------| STATEMENT SECTION |------------*/
 .statement .content {
-  align-items: center;
+  align-items: stretch;
   border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -230,7 +231,8 @@ section .content .text h2 {
   background-color: #3a4246;
   border: 0.5rem solid #995F4B;
   border-radius: 1rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  box-sizing: content-box;
   color: #F2F1ED;
   display: flex;
   flex-basis: 35%;
@@ -262,6 +264,9 @@ section .content .text h2 {
   box-shadow: 10px 10px 1px rgba(0, 0, 0, 0);
   min-width: 400px;
   width: 100%;
+}
+.statement .content .image p {
+  margin: 0;
 }
 
 /*-------------| PRODUCTS SECTION |-------------*/
@@ -455,12 +460,17 @@ footer p {
     justify-content: center;
   }
 }
-@media only screen and (max-width: 874px) {
+@media only screen and (max-width: 1003px) {
+  .banner {
+    height: 50vh;
+  }
+
   .statement .content .text {
     flex-basis: 100%;
+    min-width: 0;
   }
   .statement .content .text:hover {
-    box-shadow: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     margin-right: 0;
     transform: none;
   }
@@ -495,17 +505,87 @@ footer p {
   }
 }
 @media only screen and (max-width: 595px) {
-  .tablet {
+  .desktop, .mobile {
     display: none;
   }
 
-  .desktop {
+  .tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .desktop, .tablet {
     display: none;
   }
 
   .mobile {
     display: flex;
     justify-content: center;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+  .navbar ul {
+    box-sizing: content-box;
+    justify-content: space-evenly;
+  }
+  .navbar ul li ::after {
+    display: none;
+  }
+  .navbar ul li :hover::after {
+    display: none;
+  }
+  .navbar ul li :active::after {
+    display: none;
+  }
+  .navbar ul li a svg {
+    fill: white;
+    height: 28px;
+    width: 28px;
+  }
+}
+@media only screen and (max-width: 528px) {
+  .statement .content .text p {
+    font-size: 1rem;
+  }
+  .statement .content .image img {
+    min-width: 0;
+  }
+
+  .products .graphics figure {
+    flex-grow: 1;
+    min-width: 300px;
+  }
+
+  .employees .content .graphics figure {
+    flex-grow: 1;
+    width: 100%;
+  }
+  .employees .content .graphics figure img {
+    min-width: 50px;
+  }
+}
+@media only screen and (max-width: 461px) {
+  .banner .card h1 {
+    font-size: 2rem;
+  }
+  .banner .card p {
+    font-size: 1rem;
+  }
+
+  section .content .text h2 {
+    font-size: 2rem;
+  }
+
+  .statement .content .text {
+    padding: 1.5rem;
+  }
+}
+@media only screen and (max-width: 385px) {
+  section .content .text h2 {
+    font-size: 1.5rem;
   }
 }
 /*-------------| STYLESHEET END |-------------*/
